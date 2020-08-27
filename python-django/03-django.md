@@ -17,7 +17,7 @@
 <br>
 
 ### admin 페이지 꾸며주기
-```
+```python
 class 이름(admin.ModelAdmin):
   list_display= ('id', 'title', 'view_count', 'created_at', 'updated_at')
 ```

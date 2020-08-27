@@ -42,11 +42,42 @@ urlpatterns = [
   path('main/', main)
 ]
 ```
-이제 도메인 뒤에도 /main이 아닌 /movie/main이 붙게 된다. (시작 경로가 movie 이므로)
+이제 도메인 뒤에도 `/main`이 아닌 `/movie/main`이 붙게 된다. (시작 경로가 movie 이므로)
+
 
 <br>
 
-###
+### a href
+- **main.html** 
+```python
+<a href="#"> hi </a>
+```
+#부분에 경로를 넣어준다.  
+ex)`<a href="/movie/main"> hi </a>`  
+
+하지만 페이지 수가 많아질 경우 모든 원시 경로를 입력하기 어렵다.  
+따라서 앱의 이름과 경로의 이름을 설정해서 간단하게 만든다.
+
+<br>
+
+- **movie의 urls.py**
+```python
+app_name="movie"
+
+urlpatterns=[
+  path('main/', main, name="main")
+]
+```
+
+<br>
+
+- **main.html로 돌아가서 경로를 다시 적어주면 된다.**
+```python
+<a href='{%url "movie:main"%}'> main </a>
+```
+: movie 안의 main으로 이동하라는 뜻
+
+
 
 
 

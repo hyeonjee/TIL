@@ -5,7 +5,7 @@
 <br>
 
 ### 생성한 앱의 models.py에서 모델링
-```
+```python
 class 모델명(models.Model):
   title= models.CharField(max_length=100)
   content= models.TextField()

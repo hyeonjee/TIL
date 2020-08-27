@@ -14,7 +14,7 @@
 <br>
 
 ### 2. 앱의 `views.py`에서 함수 또는 클래스를 만들어 준다.
-```
+```python
 def main(request):
   return render(request, '폴더명/main.html')
 ```
